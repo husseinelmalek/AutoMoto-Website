@@ -46,12 +46,12 @@ arrowRight.addEventListener('click',function(){
         bullets[count -1 ].classList.add("active");
         count++;
         bullets[count -2].classList.remove("active"); 
-    sliderImages.style.backgroundImage = `url("../images/image${count}.jpg")`;
+    sliderImages.style.backgroundImage = `url("https://raw.githubusercontent.com/husseinelmalek/AutoMoto-Website/main/images/image${count}.jpg")`;
     bullets[count -1].classList.add("active");
     }else{
         bullets[count - 1].classList.remove("active");
         count=1;
-    sliderImages.style.backgroundImage = `url("../images/image${count}.jpg")`;
+    sliderImages.style.backgroundImage = `url("https://raw.githubusercontent.com/husseinelmalek/AutoMoto-Website/main/images/image${count}.jpg")`;
     bullets[count - 1].classList.add("active");
 
     }
@@ -62,14 +62,14 @@ arrowLeft.addEventListener('click',function(){
      bullets[count -1].classList.remove("active");  
         count--;
     bullets[count -1].classList.add("active");
-    sliderImages.style.backgroundImage = `url("../images/image${count}.jpg")`;
+    sliderImages.style.backgroundImage = `url("https://raw.githubusercontent.com/husseinelmalek/AutoMoto-Website/main/images/image${count}.jpg")`;
     bullets[count].classList.remove("active");  
 
     }else{
      bullets[count].classList.remove("active");  
         count=7;
      bullets[count -1].classList.add("active");
-    sliderImages.style.backgroundImage = `url("../images/image${count}.jpg")`;
+    sliderImages.style.backgroundImage = `url("https://raw.githubusercontent.com/husseinelmalek/AutoMoto-Website/main/images/image${count}.jpg")`;
      bullets[count - 7].classList.remove("active");  
 
     }
@@ -82,12 +82,12 @@ setInterval(function(){
     bullets[count -1 ].classList.add("active");
         count++;
      bullets[count -2].classList.remove("active");  
-    sliderImages.style.backgroundImage =`url("../images/image${count}.jpg")`;
+    sliderImages.style.backgroundImage =`url("https://raw.githubusercontent.com/husseinelmalek/AutoMoto-Website/main/images/image${count}.jpg")`;
     bullets[count -1].classList.add("active");
     }else{
         bullets[count - 1].classList.remove("active");
         count=1;
-    sliderImages.style.backgroundImage = `url("../images/image${count}.jpg")`;
+    sliderImages.style.backgroundImage = `url("https://raw.githubusercontent.com/husseinelmalek/AutoMoto-Website/main/images/image${count}.jpg")`;
     bullets[count - 1].classList.add("active");
     }
 },6000);
@@ -97,7 +97,7 @@ bullets.forEach((e) => {
     // console.log(e.target.getAttribute("data-index"));
     bullets[count -1].classList.remove("active");
     count = Number(e.target.getAttribute("data-index"));
-    sliderImages.style.backgroundImage =`url("../images/image${++count}.jpg")`;
+    sliderImages.style.backgroundImage =`url("https://raw.githubusercontent.com/husseinelmalek/AutoMoto-Website/main/images/image${count}.jpg")`;
     bullets[count - 1].classList.add("active");
     })
 })
