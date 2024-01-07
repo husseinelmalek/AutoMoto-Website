@@ -1,0 +1,283 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 502px;
+    
+}
+.header {
+    position: relative; 
+    overflow: hidden; 
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+   
+    /* align-items: baseline; */
+}
+.header::after{
+    content:"\00a0 \00a0 Hello Hussein";
+    background-image: url("../images/fly2.jpg");
+    position: absolute; 
+    top: 7px;
+    background-size: 200px;
+    left:-200px;
+    height: 30px;
+    width: 200px;
+    /* height: 10px; */
+    z-index: -12;
+    background-position: center;
+    animation-name: fly;
+    animation-duration: 20s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+    /* content:"";
+    background-image: url("../images/ball.gif");
+    position: absolute;
+    top: 7px;
+    background-size: cover;
+    left:-20px;
+    height: 10px;
+    width: 50px;
+    height: 100px;
+    background-position: center;
+    animation-name: fly;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal; */
+
+   
+}
+@keyframes fly {
+    /* from{
+        left: -20px;
+    }
+    to{
+        left: 100%;
+       
+    } */
+    from{
+        left: -200px;
+    }
+    to{
+        left: 100%;
+       
+    }
+    
+}
+/* .header::after:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+} */
+.header .container .logo img{
+    height: 80px;
+}
+
+.header .container .nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+.header .container .nav ul li a{
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    top: 10px;
+    color: black;
+    transition: top 1s ease;
+    animation-name: topDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes topDown {
+    from{
+        top: 10px;
+    }
+    to{
+        top: 0px;
+    }
+    
+}
+/* .header .container .nav ul li:last-child{
+    border-right: 2px solid black;
+    
+} */
+.header .container .nav > a{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   cursor: pointer;
+  
+}
+.header .container .nav > a:hover {
+    
+   color: rgb(221, 75, 75);
+   
+}
+
+.header .container .nav > a::after{
+    content: "";
+    width: 2px;
+    height: 20px;
+    
+    position: absolute;
+    background-color: black;
+    margin-right: 30px;
+}
+.header .container .nav ul li:hover a{
+   top: 5px;
+   position: relative;
+   color: rgb(221, 75, 75);
+}
+/* start contact */
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+@media (min-width:768px) {
+    .main{
+        flex-direction: row;
+    }
+    
+}
+.main .left{
+    /* flex-basis: 30%; */
+    width: 400px;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: #1c1a3f;
+}
+.main .left .form{
+    padding: 10px;
+}
+.main .left .form h2{
+    color: white;
+    padding-top: 20px;
+}
+.main .left .form input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+.main .left .form input:last-of-type{
+    padding: 20px;
+}
+
+.main .left .form .btnSubmit{
+    background-color: rgb(73, 83, 226);
+    border: none;
+    outline: none;
+    width: 90px;
+    height: 37px;
+    border-radius: 3px;
+    color: white;
+}
+.main .left .form span{
+    color: red;
+    position: relative;
+    top: -10px;
+    display: none;
+}
+.suc{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 2s ease;
+
+}
+
+
+
+
+/* foooter */
+
+.footer {
+    background-image: url("../images/earth.jpeg");
+    background-size: cover;
+    background-position: center;
+    /* padding: 100px; */
+    text-align: center;
+    position: relative;
+   
+    
+ }
+ .footer::before {
+     content: "";
+     left: 0;
+     bottom: 0;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     
+     background-color: rgba(0, 0, 0, 0.432);
+ }
+ .footer .container{
+     position: relative;
+     color: white;
+ }
+ .footer .container img{
+     padding-right: 14px;
+     padding-top: 20px;
+ }
+ .footer .are{
+   text-transform: uppercase;
+   padding: 20px;
+   border-bottom: 1px solid white;
+   font-size: 22px;
+   width: fit-content;
+   margin: 20px auto;
+ }
+ .footer .social-icons .c{
+     padding: 10px 15px;
+   }
+ .footer .copyright {
+     margin-top: 60px;
+     margin-bottom: 0;
+     padding-bottom: 20px;
+ }
+ .footer .copyright span {
+     font-weight: bold;
+     color: violet;
+ }

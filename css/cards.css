@@ -1,0 +1,277 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 502px;
+    
+}
+/* alert */
+.alert{
+    position: fixed;
+    background-color: rgb(231, 52, 52);
+    color: white;
+    padding: 15px;
+    text-align: start;
+    right: 5px;
+    top: 5px;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    z-index: 22;
+    transition: opacity 2s ease;
+}
+
+
+.header {
+    position: relative; 
+    overflow: hidden; 
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+   
+    /* align-items: baseline; */
+}
+.header::after{
+content:"\00a0 \00a0 Hello Hussein";
+    background-image: url("../images/fly2.jpg");
+    position: absolute; 
+    top: 7px;
+    background-size: 200px;
+    left:-200px;
+    height: 30px;
+    width: 200px;
+    /* height: 10px; */
+    z-index: -12;
+    background-position: center;
+    animation-name: fly;
+    animation-duration: 20s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+}
+
+@keyframes fly {
+    from{
+        left: -200px;
+    }
+    to{
+        left: 100%;
+       
+    }
+    
+}
+/* .header::after{
+    content:"";
+    background-image: url("../images/ball.gif");
+    position: absolute;
+    top: 7px;
+    background-size: cover;
+    left:-20px;
+    height: 10px;
+    width: 50px;
+    height: 100px;
+    background-position: center;
+    animation-name: fly;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: normal;
+
+   
+}
+@keyframes fly {
+    from{
+        left: -20px;
+    }
+    to{
+        left: 100%;
+       
+    }
+    
+} */
+/* .header::after:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+} */
+.header .container .logo img{
+    height: 80px;
+}
+
+.header .container .nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+.header .container .nav ul li a{
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    top: 10px;
+    color: black;
+    transition: top 1s ease;
+    animation-name: topDown;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes topDown {
+    from{
+        top: 10px;
+    }
+    to{
+        top: 0px;
+    }
+    
+}
+/* .header .container .nav ul li:last-child{
+    border-right: 2px solid black;
+    
+} */
+.header .container .nav > a{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   cursor: pointer;
+  
+}
+.header .container .nav > a:hover {
+    
+   color: rgb(221, 75, 75);
+   
+}
+
+.header .container .nav > a::after{
+    content: "";
+    width: 2px;
+    height: 20px;
+    
+    position: absolute;
+    background-color: black;
+    margin-right: 30px;
+}
+.header .container .nav ul li:hover a{
+   top: 5px;
+   position: relative;
+   color: rgb(221, 75, 75);
+}
+
+/* cards */
+.card-title{
+    color: blueviolet;
+}
+.card-text{
+    min-height: 98px;
+}
+.allProducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+   min-height: 420px;
+}
+
+.allProducts .card img{
+    height: 50%;
+}
+
+.cancel{
+    font-size: 20px;
+    cursor: pointer;
+}
+/* section */
+.allProducts .nothing img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.allProducts .nothing h2{
+    color: rgb(161, 160, 160);
+}
+.allProducts .nothing a{
+    position: relative;
+    left: 50%;
+    transform: translateX(-59%);
+    width: 120px;
+    margin-top: 20px;
+}
+
+
+/* footer */
+
+.footer {
+    background-image: url("../images/earth.jpeg");
+    background-size: cover;
+    background-position: center;
+    /* padding: 100px; */
+    text-align: center;
+    position: relative;
+   
+    
+ }
+ .footer::before {
+     content: "";
+     left: 0;
+     bottom: 0;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     
+     background-color: rgba(0, 0, 0, 0.432);
+ }
+ .footer .container{
+     position: relative;
+     color: white;
+ }
+ .footer .container img{
+     padding-right: 14px;
+     padding-top: 20px;
+ }
+ .footer .are{
+   text-transform: uppercase;
+   padding: 20px;
+   border-bottom: 1px solid white;
+   font-size: 22px;
+   width: fit-content;
+   margin: 20px auto;
+ }
+ .footer .social-icons .c{
+     padding: 10px 15px;
+   }
+ .footer .copyright {
+     margin-top: 60px;
+     margin-bottom: 0;
+     padding-bottom: 20px;
+ }
+ .footer .copyright span {
+     font-weight: bold;
+     color: violet;
+ }
